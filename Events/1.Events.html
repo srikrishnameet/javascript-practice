@@ -1,0 +1,33 @@
+<html>
+    <script>
+        function myFun(){
+            document.getElementById('gfg').innerHTML = 'geeks for geeks';
+        }
+    </script>
+    <body>
+        <button onclick="myFun()">Click me</button>
+        <p id="gfg"></p>
+    </body>
+</html>
+
+<!-- Mouse Events: click, dblclick, mousemove, mouseover, mouseout
+Keyboard Events: keydown, keypress, keyup
+Form Events: submit, change, focus, blur
+Window Events: load, resize, scroll
+
+JavaScript Events are actions or occurrences that happen in the browser.
+ They can be triggered by various user interactions or by the browser itself. -->
+
+
+
+<!-- Event handling Methods
+inline Html Handler
+<button onclick="alert('Button Clicked')">Click me</button>
+DOm Event Handlers
+let btn = document.getElementByid("myButton");
+btn.onClick = () => {alert("Button Clicked!")};
+
+AddEventListener() prefered
+btn.addEventListiner('Click',()=>{
+    alert('Button Clicked using AddEvent Listener');
+}) -->

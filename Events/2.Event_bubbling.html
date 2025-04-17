@@ -1,0 +1,32 @@
+<!-- JavaScript events propagate in two phases:
+
+Capturing Phase: Event travels from the root to the target element.
+Target Phase: The event reaches the target element where it was triggered.
+Bubbling Phase: Event travels from the target element back to the root. -->
+
+
+<!-- Event bubbling 
+Event Bubbling is the default behavior in the DOM, where an event starts at the 
+target element and "bubbles up" through its parent elements in the DOM hierarchy 
+during the bubbling phase. -->
+
+<!-- to stop the bublling we are using event.stopPropagation -->
+
+<html>
+   
+    <body>
+        <div id="parent">
+            <button id="child">Click Me</button>
+        </div>
+        <script>
+            document.getElementById('parent').addEventListener('click',()=>{
+                console.log('parent clicked');
+            });
+            document.getElementById('child').addEventListener('click',(event)=>{
+                event.stopPropagation();
+                console.log('child clicked');
+            })
+        </script>
+    </body>
+</html>
+
